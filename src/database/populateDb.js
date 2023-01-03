@@ -5,19 +5,20 @@ const getPool = require("./getPool");
 
 // funcion: insertar datos de test en la bd
 async function populateDb() {
+  let pool;
   try {
     console.log("populateDb script running.");
 
     // variable para solicitar conexion a la bd
-    const pool = await getPool();
+    pool = getPool();
 
     console.log("Inserting mock data into: users");
     await pool.query(`
         INSERT INTO users (email, password, role) VALUES
-            ("administrator@mail.com", "${await bcrypt.hash("123456",10)}", "admin"),
-            ("worker1@mail.com", "${await bcrypt.hash("123456", 10)}", "worker"),
-            ("worker2@mail.com", "${await bcrypt.hash("123456", 10)}", "worker"),
-            ("worker3@mail.com", "${await bcrypt.hash("123456", 10)}", "worker")
+            ("administrator@mail.com", "${await bcrypt.hash("1234567890",10)}", "admin"),
+            ("worker1@mail.com", "${await bcrypt.hash("1234567890", 10)}", "worker"),
+            ("worker2@mail.com", "${await bcrypt.hash("1234567890", 10)}", "worker"),
+            ("worker3@mail.com", "${await bcrypt.hash("1234567890", 10)}", "worker")
         `);
 
     console.log("Inserting mock data into: exercises");

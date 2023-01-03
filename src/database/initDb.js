@@ -7,7 +7,7 @@ const getPool = require("./getPool");
 async function initDb() {
   try {
     // variable para solicitar conexion a la bd
-    const pool = await getPool();
+    const pool = getPool();
 
     console.log("initDB script running.");
     console.log("Deleting existing tables.");

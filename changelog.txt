@@ -1,0 +1,39 @@
+01.03 - gonzalo
+
++ creado changelog.txt
+
++ creado proyecto npm
+    ++ instalados modulos node varios
+
+    ++ creado script para generar la bbdd: doc/bd/bd-original-script.sql
+
+    ++ creados scripts para refrescar la bbdd:
+        +++ src/database/initDb; borra las tablas y las vuelve a crear.
+        +++ src/database/pupulateDb; inserta algunos datos para pruebas
+
+    ++ creada funcion para conexiones con la bbdd: src/database/getPoolS
+
+    ++ creadas capetas y archivos index para la estructura de directorios y exportar/importar
+
+    ++ creada carpeta "postman" para guardar las peticiones
+
++ creada funcion utility: createError
+
++ creado endpoint: de error de no encontrado
+    ++ creado middleware: errorNotFound
+
++ creado endpoint: de errores
+    ++ creado middleware: errorHandler
+
++ creado endpoint: /login
+    ++ credo controller: loginUser
+    ++ creado schema: userLoginSchema
+    ++ creado repositorio: selectUserByEmail
+
++ creado endpoint: /newExercise
+    ++ creado controller: postNewExercise
+    ++ creado schema: exerciseSchema
+    ++ creado repositorio: insertExercise
+    ++ creado repositorio: selectExerciseByName
+
++ creado middleware: checkAdmin
