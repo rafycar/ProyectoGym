@@ -1,8 +1,10 @@
 /* archivo indice para exportar queries de exercices */
 const insertExercise = require("./insertExercise");
 const selectExerciseByName = require("./selectExerciseByName");
+const selectExercises = require("./selectExercises");
 
 module.exports = {
     insertExercise,
-    selectExerciseByName
+    selectExerciseByName,
+    selectExercises
 };

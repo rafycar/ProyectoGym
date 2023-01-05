@@ -25,9 +25,12 @@ async function populateDb() {
     await pool.query(`
         INSERT INTO exercises (name, description, typology, muscles) VALUES
             ("Press de banca", "Tumbado, levantar con los brazos barra con peso.", "Peso auxiliar", "Pectorales"),
+            ("Aperturas", "Tumbado, levantar pesas lateralmente.", "Peso auxiliar", "Pectorales"),
+            ("Flexiones", "Tumbado, levantar el cuerpo.", "Peso propio", "Pectorales"),
             ("Dominadas", "Colgarse de una barra, subir y levantar el cuerpo.", "Peso propio", "Dorsales"),
             ("Press militar", "Sentao, levantar con los brazos barra con peso", "Peso auxiliar", "Hombros"),
-            ("Curls con barra", "De pie, levantar barra desde la cadero al pecho.", "Peso auxiliar", "Biceps")
+            ("Curls con barra", "De pie, levantar barra desde la cadero al pecho.", "Peso auxiliar", "Biceps"),
+            ("Curls concentrado", "Sentado levantar pesas.", "Peso auxiliar", "Biceps")
         `);
 
     console.log("Inserting mock data into: likes");

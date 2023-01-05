@@ -17,7 +17,8 @@ const {
 
 // de exercices
 const {
-  postNewExercise
+  postNewExercise,
+  getExercises
 } = require("./controllers/exercises");
 
 /* CARGAR MIDDLEWARES (desde su index.js) */
@@ -43,7 +44,8 @@ app.get("/login", loginUser);
 
 /* ENDPOINTS exercises - worker */
 
-// app.get("/exercises", validateAuth, getExercises);
+//app.get("/exercises", validateAuth, getExercises);
+app.get("/exercises", getExercises);// para testear pendiente de juntar validateAuth
 
 //app.get("/exercices:idExercise", validateAuth, getExerciseDetails);
 // incluir si podemos opcion de filtrado
@@ -54,11 +56,10 @@ app.get("/login", loginUser);
 
 //app.get("/favorites:idUser", validateAuth, getUserFavs);
 
-
 /* ENDPOINTS exercises admin */
 
 //app.post("/newExercise", validateAuth, checkAdmin, postNewExercise);
-app.post("/newExercise", postNewExercise); // para testear pendiente de juntar validateAuthy y checkAdmin
+app.post("/newExercise", postNewExercise);// para testear pendiente de juntar validateAuth y checkAdmin
 
 //app.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
 

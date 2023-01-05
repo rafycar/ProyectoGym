@@ -1,5 +1,4 @@
 /* schema de validadcion de los datos de nuevo exercise */
-const { string } = require("joi");
 const Joi = require("joi");
 
 const exerciseSchema = Joi.object({

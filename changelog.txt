@@ -1,8 +1,15 @@
 >> 01.05 - gonzalo
 
++ creado endpoint: /exercises
+    ++ creado controller: getExercises
+    ++ creado schema: filtersExercisesSchema
+    ++ creado repositorio: selectExercises; permite filtrado    
+
 + actualizada bbdd
     ++ añadido campo "created DATETIME DEFAULT CURRENT_TIMESTAMP" a todas las tablas
         +++ actualizado repositorio "insertExercise" en consecuencia
+    
+    ++ añadidos al script "populateDb" algunos casos mas 
 
 + actualizado endpoint: /newExercise
     ++ incluida funcionalidad de subir una imagen
