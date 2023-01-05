@@ -1,4 +1,15 @@
-01.03 - gonzalo
+>> 01.05 - gonzalo
+
++ actualizada bbdd
+    ++ añadido campo "created DATETIME DEFAULT CURRENT_TIMESTAMP" a todas las tablas
+        +++ actualizado repositorio "insertExercise" en consecuencia
+
++ actualizado endpoint: /newExercise
+    ++ incluida funcionalidad de subir una imagen
+        +++ actualizado repositorio "insertExercise" en consecuencia
+        +++ actualizado controller "postNewExercise" en consecuencia
+
+>> 01.03 - gonzalo
 
 + creado changelog.txt
 

@@ -60,7 +60,9 @@ app.get("/login", loginUser);
 //app.post("/newExercise", validateAuth, checkAdmin, postNewExercise);
 app.post("/newExercise", postNewExercise); // para testear pendiente de juntar validateAuthy y checkAdmin
 
-//app.put("/exercises/idExercise", validateAuth, checkAdmin, putEditExercise);
+//app.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
+
+//app.delete("/exercises/:idExercise", validateAuth, checkAdmin, deleteExercise);
 
 /* MIDDLEWARES ERRORES */
 
