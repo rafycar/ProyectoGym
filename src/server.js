@@ -47,12 +47,11 @@ app.get("/login", loginUser);
 //app.get("/exercises", validateAuth, getExercises);
 app.get("/exercises", getExercises);// para testear pendiente de juntar validateAuth
 
-//app.get("/exercices:idExercise", validateAuth, getExerciseDetails);
-// incluir si podemos opcion de filtrado
+//app.get("/exercises:idExercise", validateAuth, getExerciseDetails);
 
-//app.post("/exercices:idExercise/like", validateAuth, toggleExerciseLike);
+//app.post("/exercises:idExercise/like", validateAuth, toggleExerciseLike);
 
-//app.post("/exercices:idExercise/fav", validateAuth, toggleExerciseFav);
+//app.post("/exercises:idExercise/fav", validateAuth, toggleExerciseFav);
 
 //app.get("/favorites:idUser", validateAuth, getUserFavs);
 

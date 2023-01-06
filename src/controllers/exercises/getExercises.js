@@ -8,7 +8,7 @@ se envia: array de objetos; cada objeto un exercise que pasa el filtrado
 */
 
 const { filtersExercisesSchema } = require("../../validationSchemas");
-const {selectExercises} = require("../../repositories/exercises")
+const { selectExercises } = require("../../repositories/exercises");
 
 async function getExercises(req, res, next) {
   try {

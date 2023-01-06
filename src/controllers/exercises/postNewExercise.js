@@ -23,8 +23,6 @@ async function postNewExercise(req, res, next) {
     // recoger datos del body
     const { name, description, typology, muscles } = req.body;
 
-    // recoger ruta de la imagen PENDIENTE
-
     // comprobar si el ejercicio ya existe: si en la bbdd ya hay ese nombre
     // // seleccionar exercise de la bbdd
     const exercise = await selectExerciseByName(name);
@@ -36,15 +34,17 @@ async function postNewExercise(req, res, next) {
     // gestionar imagen subida por cliente
     // // recuperar datos de la peticion;
     const picture = req.files.picture;
+    console.log(picture);
 
-    //if (picture) {
-      // validar q se envia 1 unica imagen;; ileupload devuleve objeto si 1 unica imageh y array si mas de una imagen
-      //if (typeof exerciseImage !== 'object')
+    // validar q se envia 1 unica imagen;; fileupload devuleve objeto si 1 unica imagen y array si mas de una imagen
+    // // typeof array devulve objeto; no sirve para hacer distincion en este caso
+    if (Array.isArray(picture)) {
+      createError("Only one picture per exercise is allowed", 409);
+    }
+    // procesar imagen (ajustar y guardar), enviando su buffer con .data;
+    // // processImage(buffer, folder, size)
+    const pictureName = await processImage(picture.data, "exercises", 1000);
 
-      // procesar imagen (ajustar y guardar), enviando su buffer con .data;
-      // // processImage(buffer, folder, size)
-      const pictureName = await processImage(picture.data, "exercise", 1000);
-    //}
     // insertar exercise en la bbdd (llamar repositorio)
     await insertExercise({ name, description, typology, muscles, pictureName });
 
