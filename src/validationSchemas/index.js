@@ -5,9 +5,11 @@ const userLoginSchema = require("./users/userLoginSchema");
 // de exercices
 const exerciseSchema = require("./exercises/exerciseSchema");
 const filtersExercisesSchema = require("./exercises/filtersExercisesSchema");
+const idExerciseSchema = require("./exercises/idExerciseSchema");
 
 module.exports = {
-    userLoginSchema,
-    exerciseSchema,
-    filtersExercisesSchema
+  userLoginSchema,
+  exerciseSchema,
+  filtersExercisesSchema,
+  idExerciseSchema,
 };

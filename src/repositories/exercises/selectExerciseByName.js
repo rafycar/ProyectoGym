@@ -10,7 +10,7 @@ async function selectExerciseByName(name) {
     name,
   ]);
 
-  // devolver objeto user con: idUser, email, password (encriptada), role
+  // devolver objeto exercise con todos sus campos
   return exercise;
 };
 

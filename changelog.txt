@@ -1,6 +1,13 @@
+>> 01.07 - gonzalo
+
+creado endpoint: GET /exercises:idExercise
+    ++ creado controller: getExerciseDetails
+    ++ creado shema: idExerciseSchema
+    ++ creado repositorio: selectExerciseById
+
 >> 01.05 - gonzalo
 
-+ creado endpoint: /exercises
++ creado endpoint: GET /exercises
     ++ creado controller: getExercises
     ++ creado schema: filtersExercisesSchema
     ++ creado repositorio: selectExercises; permite filtrado    
@@ -11,7 +18,7 @@
     
     ++ añadidos al script "populateDb" algunos casos mas 
 
-+ actualizado endpoint: /newExercise
++ actualizado endpoint: POST /newExercise
     ++ incluida funcionalidad de subir una imagen
         +++ actualizado repositorio "insertExercise" en consecuencia
         +++ actualizado controller "postNewExercise" en consecuencia
@@ -43,12 +50,12 @@
 + creado endpoint: de errores
     ++ creado middleware: errorHandler
 
-+ creado endpoint: /login
++ creado endpoint: GET /login
     ++ credo controller: loginUser
     ++ creado schema: userLoginSchema
     ++ creado repositorio: selectUserByEmail
 
-+ creado endpoint: /newExercise
++ creado endpoint: POST /newExercise
     ++ creado controller: postNewExercise
     ++ creado schema: exerciseSchema
     ++ creado repositorio: insertExercise
