@@ -3,10 +3,12 @@ const insertExercise = require("./insertExercise");
 const selectExerciseByName = require("./selectExerciseByName");
 const selectExercises = require("./selectExercises");
 const selectExerciseById = require("./selectExerciseById");
+const deleteExerciseById = require("./deleteExerciseById")
 
 module.exports = {
     insertExercise,
     selectExerciseByName,
     selectExercises,
-    selectExerciseById
+    selectExerciseById,
+    deleteExerciseById
 };
