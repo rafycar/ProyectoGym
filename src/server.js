@@ -19,6 +19,7 @@ const {
   getExercises,
   getExerciseDetails,
   deleteExercise,
+  getUserFavs,
 } = require("./controllers/exercises");
 
 /* CARGAR MIDDLEWARES (desde su index.js) */
@@ -50,7 +51,8 @@ app.get("/exercises/:idExercise", getExerciseDetails); // para testear pendiente
 
 //app.post("/exercises/:idExercise/fav", validateAuth, toggleExerciseFav);
 
-//app.get("/favorites:idUser", validateAuth, getUserFavs);
+//app.get("/favorites/:idUser", validateAuth, getUserFavs);
+app.get("/favorites/:idUser", getUserFavs); // para testear pendiente de juntar validateAuth
 
 /* ENDPOINTS exercises admin */
 

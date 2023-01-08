@@ -1,10 +1,17 @@
+>> 01.08 gonzalo
+
++ creado endpoint: GET /favorites/:idUser
+    ++ creado controller: getUserFavs
+    ++ creado shema: idUserSchema
+    ++ creado repositorio: selectUserFavs
+
 >> 01.07 - gonzalo
 
-+ creado endpoint: DELETE /exercises:idExercise
++ creado endpoint: DELETE /exercises/:idExercise
     ++ creado controller: deleteExercise
     ++ creado repositorio: deleteExerciseById
 
-+ creado endpoint: GET /exercises:idExercise
++ creado endpoint: GET /exercises/:idExercise
     ++ creado controller: getExerciseDetails
     ++ creado shema: idExerciseSchema
     ++ creado repositorio: selectExerciseById

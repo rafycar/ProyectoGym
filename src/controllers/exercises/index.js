@@ -2,11 +2,13 @@
 const postNewExercise = require("./postNewExercise");
 const getExercises = require("./getExercises");
 const getExerciseDetails = require("./getExerciseDetails");
-const deleteExercise = require("./deleteExercise")
+const deleteExercise = require("./deleteExercise");
+const getUserFavs = require("./getUserFavs");
 
 module.exports = {
   postNewExercise,
   getExercises,
   getExerciseDetails,
-  deleteExercise
+  deleteExercise,
+  getUserFavs,
 };

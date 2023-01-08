@@ -1,6 +1,7 @@
 /* archivo indice para exportar esquemas de validacion */
 // de users
 const userLoginSchema = require("./users/userLoginSchema");
+const idUserSchema = require("./users/idUserSchema");
 
 // de exercices
 const exerciseSchema = require("./exercises/exerciseSchema");
@@ -12,4 +13,5 @@ module.exports = {
   exerciseSchema,
   filtersExercisesSchema,
   idExerciseSchema,
+  idUserSchema,
 };
