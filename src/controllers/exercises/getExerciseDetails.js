@@ -19,7 +19,6 @@ async function getExerciseDetails(req, res, next) {
 
     // recuperar exercise de la bbdd con su idExercise
     const exercise = await selectExerciseById(idExercise);
-    console.log(exercise)
 
     // lanzar error si no existe el idExercise solicitado
     if (typeof exercise === "undefined") {
