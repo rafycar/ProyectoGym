@@ -18,7 +18,7 @@ const {
   postNewExercise,
   getExercises,
   getExerciseDetails,
-  deleteExercise
+  deleteExercise,
 } = require("./controllers/exercises");
 
 /* CARGAR MIDDLEWARES (desde su index.js) */
@@ -55,12 +55,12 @@ app.get("/exercises/:idExercise", getExerciseDetails); // para testear pendiente
 /* ENDPOINTS exercises admin */
 
 //app.post("/newExercise", validateAuth, checkAdmin, postNewExercise);
-app.post("/newExercise", postNewExercise);// para testear pendiente de juntar validateAuth y checkAdmin
+app.post("/newExercise", postNewExercise); // para testear pendiente de juntar validateAuth y checkAdmin
 
 //app.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
 
 //app.delete("/exercises/:idExercise", validateAuth, checkAdmin, deleteExercise);
-app.delete("/exercises/:idExercise", deleteExercise);// para testear pendiente de juntar validateAuth y checkAdmin
+app.delete("/exercises/:idExercise", deleteExercise); // para testear pendiente de juntar validateAuth y checkAdmin
 
 /* MIDDLEWARES ERRORES */
 

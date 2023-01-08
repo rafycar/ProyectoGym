@@ -50,50 +50,51 @@ Reinicia la BBDD.
 - populateDb
 Introduce algunos datos en todas las tablas.
 
-+ API
++ ENDPOINTS
 
-.get("/login", loginUser);
+- .get("/login", loginUser);
 
 Permite el login del usuario; requiere email y contraseña y devuleve token de sesión.
 
-.get("/register", registerUser);
+- .get("/register", registerUser);
 
 
-.get("/exercises", validateAuth, getExercises);
+- .get("/exercises", validateAuth, getExercises);
 
-Devuleve todos los ejercicios de la bbdd; requiere que el usuario esté autenticado.
+Devuelve todos los ejercicios de la bbdd; requiere que el usuario esté autenticado.
 
-.get("/exercises:idExercise", validateAuth, getExerciseDetails);
+- .get("/exercises:idExercise", validateAuth, getExerciseDetails);
 
-Devuleve un ejercicio en particular; debe indicarse el idExercise mediante path param; requiere que el usuario esté autenticado.
+Devuelve un ejercicio en particular; requiere que el usuario esté autenticado.
+Debe indicarse el idExercise mediante path param; 
 
-.post("/exercises/:idExercise/like", validateAuth, toggleExerciseLike);
-
-; requiere que el usuario esté autenticado.
-
-.post("/exercises/:idExercise/fav", validateAuth, toggleExerciseFav);
+- .post("/exercises/:idExercise/like", validateAuth, toggleExerciseLike);
 
 ; requiere que el usuario esté autenticado.
 
-.get("/favorites:idUser", validateAuth, getUserFavs);
+- .post("/exercises/:idExercise/fav", validateAuth, toggleExerciseFav);
 
 ; requiere que el usuario esté autenticado.
 
-.post("/newExercise", validateAuth, checkAdmin, postNewExercise);
+- .get("/favorites:idUser", validateAuth, getUserFavs);
+
+; requiere que el usuario esté autenticado.
+
+- .post("/newExercise", validateAuth, checkAdmin, postNewExercise);
 
 Permite crear un nuevo ejercicio en la bbdd; requiere que el usuario esté autenticado y sea administrador.
-Los datos se envian mediante peticion tipo form-data, con los campos: 
+Los datos se esperan mediante peticion tipo form-data, con los campos: 
 -- name: string, requerido.
 -- description: string, requerido.
 -- typology: string, requerido.
 -- muscles: string, requerido.
--- picture: solo admite una imagen.
+-- picture: imagen, opcional; solo se admite una.
 
 
-.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
+- .put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
 
 ; requiere que el usuario esté autenticado. y sea administrador.
 
-.delete("/exercises/:idExercise", validateAuth, checkAdmin, deleteExercise);
+- .delete("/exercises/:idExercise", validateAuth, checkAdmin, deleteExercise);
 
-Borra un ejercicio de la bbdd, indicando su idExercise; requiere que el usuario esté autenticado. y sea administrador.
+Borra un ejercicio de la bbdd, indicando su idExercise; requiere que el usuario esté autenticado y sea administrador.
