@@ -11,7 +11,10 @@ app.use(fileUpload());
 
 /* CARGAR CONTROLLERS */
 // de users
-const { loginUser } = require("./controllers/users");
+const { 
+  loginUser,
+  registerUser
+} = require("./controllers/users");
 
 // de exercices
 const {
@@ -37,7 +40,7 @@ app.listen(PORT, () => {
 
 app.get("/login", loginUser);
 
-//app.get("/register", registerUser);
+app.get("/register", registerUser);
 
 /* ENDPOINTS exercises - worker */
 

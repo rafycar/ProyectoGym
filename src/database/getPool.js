@@ -13,21 +13,23 @@ const {
 // funcion: obtener conexion con la bd
 let pool;
 
-function getPool() {
+const getConnection = async() => {
   // si aun no existe crear grupo de conexion
   if (!pool) {
     pool = mysql.createPool({
       connectionLimit: 10,
-      host: DATABASE_HOST,
-      port: DATABASE_PORT,
-      user: DATABASE_USER,
-      password: DATABASE_PASSWORD,
-      database: DATABASE_NAME,
+      host:DATABASE_HOST,
+      port:DATABASE_PORT,
+      user:DATABASE_USER,
+      password:DATABASE_PASSWORD,
+      database:DATABASE_NAME,
       timezone: "Z",
     });
   }
   // devolver conexion del pool a la db
-  return pool;
+  return await pool.getConnection();
 }
 
-module.exports = getPool;
+module.exports = {
+  getConnection,
+};

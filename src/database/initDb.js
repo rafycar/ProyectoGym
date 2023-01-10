@@ -1,13 +1,14 @@
 // cargar modulos
 require("dotenv").config();
-
-const getPool = require("./getPool");
+//console.log(process.env);
+const { getConnection } = require("./getPool");
 
 // funcion: crear la bd
 async function initDb() {
+  let pool;
   try {
     // variable para solicitar conexion a la bd
-    const pool = getPool();
+    pool = await getConnection();
 
     console.log("initDB script running.");
     console.log("Deleting existing tables.");
