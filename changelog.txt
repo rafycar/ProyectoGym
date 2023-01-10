@@ -1,3 +1,7 @@
+>> 01.10 gonzalo
+
++ instalado CORS e implementado su middleware
+
 >> 01.08 gonzalo
 
 + creado endpoint: GET /favorites/:idUser
