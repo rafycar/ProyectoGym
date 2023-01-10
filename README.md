@@ -52,6 +52,10 @@ Reinicia la BBDD.
 
 Introduce algunos datos en todas las tablas.
 
++ VARIABLES PRIVADAS .env
+
+Se incluye el archivo "envPlantilla" a modo de plantilla para rellenar el .env con los datos pertinentes.
+
 + ENDPOINTS
 
 - .get("/login", loginUser);
