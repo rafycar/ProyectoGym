@@ -1,5 +1,7 @@
 >> 01.10 gonzalo
 
++ creado middleware: validateAuth
+
 + instalado CORS e implementado su middleware
 
 + modificado README, inclusion de la plantilla para el .env

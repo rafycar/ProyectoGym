@@ -65,7 +65,6 @@ app.post("/newExercise", validateAuth, checkAdmin, postNewExercise);
 //app.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
 
 app.delete("/exercises/:idExercise", validateAuth, checkAdmin, deleteExercise);
-//app.delete("/exercises/:idExercise", validateAuth, deleteExercise);
 
 /* MIDDLEWARES ERRORES */
 
