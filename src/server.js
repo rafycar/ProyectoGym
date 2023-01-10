@@ -43,7 +43,7 @@ app.listen(PORT, () => {
 
 app.get("/login", loginUser);
 
-app.get("/register", registerUser);
+app.post("/register", registerUser);
 
 /* ENDPOINTS exercises - worker */
 
