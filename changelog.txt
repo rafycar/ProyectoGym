@@ -2,6 +2,8 @@
 
 + instalado CORS e implementado su middleware
 
++ modificado README, inclusion de la plantilla para el .env
+
 >> 01.08 gonzalo
 
 + creado endpoint: GET /favorites/:idUser
