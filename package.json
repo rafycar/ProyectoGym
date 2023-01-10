@@ -16,7 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/rafycar/ProyectoGym.git"
   },
-  "keywords": ["node", "api"],
+  "keywords": [
+    "node",
+    "api"
+  ],
   "author": "Rafael & Gonzalo",
   "license": "ISC",
   "bugs": {
@@ -25,6 +28,7 @@
   "homepage": "https://github.com/rafycar/ProyectoGym#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-fileupload": "^1.4.0",
