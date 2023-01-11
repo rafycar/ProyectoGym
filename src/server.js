@@ -28,6 +28,16 @@ const {
   getUserFavs,
 } = require("./controllers/exercises");
 
+// de likes
+const {
+  toggleExerciseLike
+} = require("./controllers/likes")
+
+// de favs
+const {
+  toggleExerciseFav
+} = require("./controllers/favs")
+
 /* CARGAR MIDDLEWARES (desde su index.js) */
 const { errorNotFound, errorHandler, validateAuth, checkAdmin } = require("./middlewares");
 
@@ -51,16 +61,16 @@ app.get("/exercises", validateAuth, getExercises);
 
 app.get("/exercises/:idExercise", validateAuth, getExerciseDetails);
 
-//app.post("/exercises/:idExercise/like", validateAuth, toggleExerciseLike);
+app.post("/exercises/:idExercise/like", validateAuth, toggleExerciseLike);
 
-//app.post("/exercises/:idExercise/fav", validateAuth, toggleExerciseFav);
+app.post("/exercises/:idExercise/fav", validateAuth, toggleExerciseFav);
 
 app.get("/favorites/:idUser", validateAuth, getUserFavs);
 
 /* ENDPOINTS exercises admin */
 
 app.post("/newExercise", validateAuth, checkAdmin, postNewExercise);
-
+//el postman necesita recargar la imagen a veces
 
 //app.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
 
