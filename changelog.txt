@@ -1,5 +1,8 @@
 >> 01.10 gonzalo
 
++ creado endpoint: put
++ creados endpoints: like/fav
+
 + creado middleware: validateAuth
 
 + instalado CORS e implementado su middleware

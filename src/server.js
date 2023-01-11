@@ -26,6 +26,7 @@ const {
   getExerciseDetails,
   deleteExercise,
   getUserFavs,
+  putEditExercise
 } = require("./controllers/exercises");
 
 // de likes
@@ -72,7 +73,7 @@ app.get("/favorites/:idUser", validateAuth, getUserFavs);
 app.post("/newExercise", validateAuth, checkAdmin, postNewExercise);
 //el postman necesita recargar la imagen a veces
 
-//app.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
+app.put("/exercises/:idExercise", validateAuth, checkAdmin, putEditExercise);
 
 app.delete("/exercises/:idExercise", validateAuth, checkAdmin, deleteExercise);
 
